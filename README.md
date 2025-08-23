@@ -2,6 +2,7 @@
 Distributed server for hollerchat
 
 ### Thoughts
+* Use Signal protocol for encryption?
 * How to trust a new server
   * Transitive trust?
   * Central authentication?
