@@ -2,14 +2,15 @@
 Distributed server for hollerchat
 
 ### Thoughts
-* Use Signal protocol for encryption?
+* Use Signal protocol over XMPP for private messaging
 * How to trust a new server
   * Transitive trust?
   * Central authentication?
 
-## Holler protocol
-JSON messages supporting three levels: public, group and private.
+# Holler protocol
 
+## Messages
+JSON messages supporting three levels: public, group and private.
 ### Public message
 ```json
 {
@@ -36,4 +37,30 @@ JSON messages supporting three levels: public, group and private.
   "message": "This is a **private** message with markdown :cat:",
   "images": []
 }
+<<<<<<< Updated upstream
 ``` 
+=======
+```
+## Control messages
+### Group metadata
+```json
+{
+  "groupId": "grouphash",
+  "name": "Gnu appreciation group",
+  "description": "A group for people who appreciate gnus",
+  "scope": "PUBLIC",
+  "image": {
+    "uri": "http://dam.example.com/hash",
+    "alt": "Image of a gnu"
+  }
+}
+```
+### User metadata
+```json
+{
+  "userId": "userhash",
+  "name": "User Testson",
+  "private": false
+}
+```
+>>>>>>> Stashed changes
